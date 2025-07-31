@@ -1,5 +1,5 @@
-````markdown
-# 🌞 ESP32 Smart Light-Controlled Sunshade System
+
+## 🌞 ESP32 Smart Light-Controlled Sunshade System
 
 This project implements a smart sunshade system powered by an **ESP32**, which adjusts based on real-time light intensity using a **DFRobot B_LUX_V30B** sensor. It supports both **automatic and manual modes**, and communicates data via **MQTT** for remote monitoring and control, such as through **Node-RED**.
 
