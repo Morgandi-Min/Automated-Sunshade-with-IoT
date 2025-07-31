@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Python"
+		},
+		{
+			"name": "Intern",
+			"path": "."
+		},
+		{
+			"name": "3 in 1 Sensor",
+			"path": "../3 in 1 Sensor"
+		},
+		{
+			"name": "IMU",
+			"path": "../IMU"
+		},
+		{
+			"name": "esp32helloworld",
+			"path": "../../../../Downloads/esp32helloworld"
+		}
+	],
+	"settings": {}
+}
