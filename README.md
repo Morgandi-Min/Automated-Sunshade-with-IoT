@@ -107,14 +107,3 @@ Inside Node-RED:
 3. Click **Install**
 
 ---
-
-## 💡 Next Steps
-
-* Use MQTT input nodes to **subscribe** to `esp32/lightSystem`
-* Use UI elements (e.g., gauge, text, buttons) to display:
-
-  * Light (lux)
-  * Motor state
-  * Current mode
-* Send MQTT messages to `esp32/manual/control` to **control the sunshade remotely**
-
