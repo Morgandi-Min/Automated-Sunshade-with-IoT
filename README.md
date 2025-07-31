@@ -28,24 +28,6 @@ This project implements a smart sunshade system powered by an **ESP32**, which a
 
 ---
 
-## 📌 Pin Configuration
-
-| Function           | ESP32 Pin |
-|--------------------|-----------|
-| Step Pin           | 32        |
-| Direction Pin      | 33        |
-| Enable Pin         | 34        |
-| Top Limit Switch   | 16        |
-| Bottom Limit Switch| 23        |
-| Manual Up Button   | 27        |
-| Manual Down Button | 14        |
-| Mode Toggle Button | 12        |
-| LED Manual Mode    | 19        |
-| LED Auto Mode      | 18        |
-| Light Sensor EN    | 15        |
-
----
-
 ## 🧠 System Behavior
 
 ### AUTO Mode:
@@ -136,21 +118,3 @@ Inside Node-RED:
   * Current mode
 * Send MQTT messages to `esp32/manual/control` to **control the sunshade remotely**
 
-Let me know if you'd like a **Node-RED flow export** to get started quickly!
-
----
-
-## 📜 License
-
-MIT License
-
----
-
-> Developed for smart greenhouse and shading systems using ESP32, MQTT, and Node-RED.
-
-```
-
----
-
-You can copy this into a `README.md` file in your GitHub project root. If you want a working Node-RED dashboard to match this system, just let me know and I’ll generate a ready-to-import `.json` flow for you.
-```
