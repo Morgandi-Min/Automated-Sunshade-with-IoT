@@ -47,7 +47,6 @@ This project implements a smart sunshade system powered by an **ESP32**, which a
 - **Broker:** `mqtt-dashboard.com`
 - **Port:** `1883`
 - **Publish Topic:** `esp32/lightSystem`
-- **Subscribe Topic:** `esp32/manual/control`
 - **MQTT Commands:** `"UP"` and `"DOWN"`
 
 ### Example Payload:
