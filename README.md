@@ -126,3 +126,65 @@ This lets you connect to your ESP32’s MQTT broker.
 * Buttons to publish `UP` or `DOWN` to the MQTT topic?
 
 Let me know — I can create and export that for you.
+
+---
+
+# ESP32 Smart Light-Controlled Sunshade System
+
+This project implements a smart automatic sunshade controller using an ESP32 microcontroller. It adjusts a motorized shade system based on real-time light intensity data and allows for manual or automatic operation modes. The system also publishes sensor and system state data to an MQTT broker, allowing integration with platforms like Node-RED for data visualization and remote control.
+
+## 🔧 Features
+
+- 🌞 Light-based automatic control using DFRobot B_LUX_V30B sensor
+- 🤖 Manual control buttons and MQTT remote control commands
+- 📊 Real-time data publishing to MQTT topic
+- 🔁 Motor control with limit switches
+- 💡 Mode indication via LEDs (AUTO or MANUAL)
+- 📡 WiFi connectivity and MQTT communication
+
+## 📦 Hardware Requirements
+
+- ESP32s board
+- DFRobot B_LUX_V30B light sensor
+- Stepper Motor or DC Motor
+- Limit switches (top and bottom)
+- Push buttons for manual up/down and mode toggle
+- Indicator LEDs for AUTO/MANUAL modes
+- Power supply suitable for ESP32 and motor
+
+## 🧠 Software Requirements
+
+- Arduino IDE with ESP32 board support
+- Libraries:
+  - `WiFi.h`
+  - `PubSubClient.h`
+  - `Wire.h`
+  - `DFRobot_B_LUX_V30B.h`
+
+## 📡 MQTT Configuration
+
+- **Broker:** `mqtt-dashboard.com`
+- **Port:** `1883`
+- **Publish Topic:** `esp32/lightSystem`
+- **Subscribe Topic:** `esp32/manual/control`
+- **MQTT Commands:** `"UP"` and `"DOWN"` (only in MANUAL mode)
+
+
+## 🧠 System Behavior
+
+- **AUTO Mode:**
+  - If light level > 200 lux and shade is not fully up → move up.
+  - If light level < 200 lux and shade is not fully down → move down.
+
+- **MANUAL Mode:**
+  - Control via push buttons or MQTT commands.
+  - Limit switches prevent overrun at both ends.
+
+## 📈 Data Payload Example (MQTT)
+```json
+{
+  "lux": 235.6,
+  "mode": "AUTO",
+  "motor": "IDLE"
+}
+
