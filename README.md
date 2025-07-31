@@ -1,7 +1,3 @@
-Sure! Here's a complete and combined `README.md` file for your GitHub repository. It includes both the **ESP32 smart sunshade system** description and **Node-RED installation/setup guide**, all in one markdown file:
-
----
-
 ````markdown
 # 🌞 ESP32 Smart Light-Controlled Sunshade System
 
