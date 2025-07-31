@@ -42,21 +42,43 @@ This project implements a smart sunshade system powered by an **ESP32**, which a
 
 ---
 
-## 📦 MQTT Setup
+## 📡 MQTT Setup Guide
+
+This project uses **MQTT** to allow the ESP32 to communicate with external interfaces like **Node-RED**, dashboards, or mobile apps.
+
+---
+
+### ✅ What is MQTT?
+
+MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol designed for low-power and low-bandwidth devices. It's ideal for IoT systems like this automatic sunshade.
+
+---
+
+### 🔌 MQTT Broker Configuration
+
+By default, this project uses a **public MQTT broker** for testing:
 
 - **Broker:** `mqtt-dashboard.com`
 - **Port:** `1883`
+- **Username/Password:** *Not required* (open connection)
 - **Publish Topic:** `esp32/lightSystem`
-- **MQTT Commands:** `"UP"` and `"DOWN"`
+- **Subscribe Topic:** `esp32/manual/control`
 
-### Example Payload:
-```json
-{
-  "lux": 235.6,
-  "mode": "AUTO",
-  "motor": "IDLE"
-}
-````
+You can change the broker details in `main.cpp` if needed.
+
+---
+
+### 📲 ESP32 MQTT in Code
+
+In the code, the ESP32:
+
+- **Publishes** sensor and status data every 3 seconds:
+  ```json
+  {
+    "lux": 235.6,
+    "mode": "AUTO",
+    "motor": "IDLE"
+  }
 
 ---
 
